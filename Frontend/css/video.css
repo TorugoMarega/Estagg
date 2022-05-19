@@ -1,0 +1,110 @@
+/*** T H E - M A G I C - O F - O B J E C T - F I T ***/
+/*****************************************************/
+.video-container {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.423);
+}
+@media (min-width: 600px) {
+  .video-container {
+    height: 85vh;
+  }
+}
+
+video {
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 50%;
+}
+
+
+/*** A E S T H E T I C S ***/
+/***************************/
+
+
+body {
+  color: white;
+}
+
+.video-container:after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: 900;
+  margin: 0 0 1rem;
+  padding: 0;
+  line-height: 1;
+  font-family: Futura, Helvetica, sans-serif;
+  font-size: 5vw;
+}
+@media (max-width: 400px) {
+  h1 {
+    font-size: 22px;
+  }
+}
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 75px;
+  }
+}
+
+.callout {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.423);
+}
+
+.support {
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  text-transform: uppercase;
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-align: right;
+  position: relative;
+  z-index: 10;
+}
+.support a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+}
+.support a:before {
+  display: block;
+  position: absolute;
+  content: "";
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: 0.3s;
+}
+.support a:hover:before {
+  width: 100%;
+}

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/sistema.css">
+  <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+  <title>Empresas | Estagg</title>
+</head>
+
+<body>
+  <div class="container-fluid overflow-hidden cabecalho">
+    <!-- -------------------------------------------------------------CABECALHO----------------------------------------------------------- -->
+    <div class="row vh-100 overflow-auto">
+      <div class="col-12  col-xl-2 col-lg-2 px-sm-2 px-0  d-flex sticky-top bg-black">
+        <div
+          class="d-flex flex-sm-column flex-row flex-grow-1 align-items-center  px-3 pt-2 text-white">
+          <a href="home.html"
+            class="d-flex  align-items-center pb-sm-3 mb-md-0 me-md-auto text-white text-decoration-none">
+            <span class="fs-5 d-sm-inline d-none">
+              <img class="d-flex" src="img/estagg-horizontal-branca.svg" width="170" alt="" srcset="">
+            </span>
+          </a>
+          <ul
+            class="nav nav-pills flex-sm-column flex-row flex-nowrap flex-shrink-1 flex-sm-grow-0 flex-grow-1 mb-sm-auto mb-0 justify-content-center align-items-center align-items-sm-start"
+            id="menu">
+            <li class="nav-item">
+              <a href="home.html" class="nav-link px-sm-0 px-2">
+                <i class="fs-5 bi-house"></i><span class="ms-1  d-sm-inline">Home</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="alunos.html" class="nav-link px-sm-0 px-2">
+                <i class="fs-5 bi-house"></i><span class="ms-1  d-sm-inline">Alunos</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="empresas.html" class="nav-link px-sm-0 px-2">
+                <i class="fs-5 bi-table"></i><span class="ms-1  d-sm-inline">Empresas</span></a>
+            </li>
+            <li class="dropdown">
+              <a href="vagas.html" class="nav-link dropdown-toggle px-sm-0 px-1" id="dropdown" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="fs-5 bi-bootstrap"></i><span class="ms-1  d-sm-inline">Vagas</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdown">
+                <li><a class="dropdown-item" href="#">Estágio Obrigatório</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Estágio não Obrigatório</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="dropdown py-sm-4 mt-sm-auto ms-auto ms-sm-0 flex-shrink-1">
+            <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+              id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="img/user/bill.jpg" alt="hugenerd" width="28" height="28" class="rounded-circle">
+              <span class="d-none d-sm-inline mx-1">Bill Bill</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+
+              <li><a class="dropdown-item" href="#">Configurações</a></li>
+              <li><a class="dropdown-item" href="#">Perfil</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Sair</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col-sm-12 col-lg-10 d-flex flex-column h-sm-100">
+            <!-- -------------------------------------------------------------MAIN----------------------------------------------------------- -->
+        <main class="mt-2 mb-4 caixa ">
+
+          <div class="row">
+            <div class="col">
+              <div class="row title text-center">
+                <div class="col">
+                  <h1 class="">Empresas</h1>
+                </div>
+                <div class="col">
+                  <button id="btnAdd" class="btn btn-outline-success" type="submit" data-bs-toggle="modal"
+                    data-bs-target="#formulario"><i class="fa-solid fa-plus"></i>Adicionar</button>
+                </div>
+              </div>
+
+              <!--                 <div class="row">
+                            <div class="col" id="cadastro_title">
+                              <h2>Cadastrar novo aluno</h2>
+                            </div>
+                            <div class="row">
+                              <div class="linha"></div>
+                            </div>
+                        </div> -->
+
+
+              <div class="row sistema">
+                <div class="col d-flex justify-content-center data ">
+                  <div class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Digite o id da empresa"
+                      aria-label="Search">
+                    <button id="searchBtn" class="btn btn-outline-success" type="submit" data-bs-toggle="modal"
+                      data-bs-target="#myModal"><i class="fas fa-search"></i></button>
+                  </div>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h4 class="modal-title" id="myModalLabel">Empresa</h4>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          Nome: Sankhya
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-bs-dismiss="modal">Fechar</button>
+                          <button id="btnSelecionar" type="button" class="btn btn-success" data-bs-dismiss="modal">Selecionar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ---------------------------------------------------------TABLE--------------------------------------------------------------- -->
+              <div id="divVoltaTable" class="mt-3 mx-4 table-responsive">
+                <table 
+                  class="table align-middle border border-2 table-striped shadow-sm  table-hover table-custom text-center overflow-visible">
+                  <thead>
+                    <tr class="table-active table-dark">
+                      <th scope="col">ID</th>
+                      <th scope="col">Nome</th>
+                      <th class="" scope="col">CNPJ</th>
+                      <th scope="col">Inscrição Estadual</th>
+                      <th scope="col">CEP</th>
+                      <th scope="col">Endereço</th>
+                      <th scope="col">Telefone</th>
+                      <th colspan="2" scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody id="tableEmpresas">
+
+                  </tbody>
+                </table>
+              </div>
+              <!-- --------------------------------------------------------------------------------------------------------------------------------- -->
+
+              <div>
+                <!--------------------------------------------------- Modal cadastro empresa ------------------------------------------------->
+                <div class="modal fade" id="formulario" tabindex="-1" role="dialog" aria-labelledby="modalEmpresa">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="modal-title" id="modalEmpresa">Cadastrar Empresa</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+
+                        <!--------------------------------------------------- Formulario de cadastro empresa------------------------------------------------->
+                        <form class="row g-3">
+                          <div class="col-md-6">
+                            <label for="inputNome" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="inputNome" autocomplete="off">
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputCnpj" class="form-label">CNPJ</label>
+                            <input type="text" class="form-control" autocomplete="off" id="inputCnpj">
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputInscricao" class="form-label">Inscrição Estadual</label>
+                            <input type="text" class="form-control" autocomplete="off" id="inputInscricao">
+                          </div>
+                          
+                          <div class="col-md-6">
+                            <label for="inputFone" class="form-label">Telefone</label>
+                            <input type="tel" class="form-control" autocomplete="off" id="inputFone">
+                          </div>
+
+                          <div class="col-md-6">
+                            <label for="inputCep" class="form-label">CEP</label>
+                            <input type="text" class="form-control" autocomplete="off" maxlength="10" id="inputCep" value="" onblur="getCep(this.value)" required>
+                          </div>
+
+                          <div class="col-md-6">
+                            <label for="inputLogradouro" class="form-label">Rua/Avenida</label>
+                            <input type="text" class="form-control" autocomplete="off" id="inputLogradouro" required>
+                          </div>
+
+                          <div class="col-md-6">
+                            <label for="inputBairro" class="form-label">Bairro</label>
+                            <input type="text" class="form-control" autocomplete="off" id="inputBairro" required>
+                          </div>
+
+                          <div class="col-md-6">
+                            <label for="inputNumero" class="form-label">Número</label>
+                            <input type="text" class="form-control" autocomplete="off" id="inputNumero" required>
+                          </div>
+
+
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-bs-dismiss="modal">Fechar</button>
+                            <button id="btnSalvarEmpresa" type="button" class="btn btn-success" data-bs-dismiss="modal">
+                              <i class="fas fa-save me-2"></i>Salvar
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </main>
+      </div>
+
+
+    </div>
+  </div>
+
+
+
+
+  <!-- -------------------------------------------------------------RODAPE----------------------------------------------------------- -->
+
+  <div class="my- rodapebg ">
+
+    <footer class="text-center text-lg-start">
+      <!-- Grid container -->
+      <div class="container p-4 ">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <h5 class="text-uppercase mb-4 ">Alunos</h5>
+
+            <ul class="list-unstyled mb-4 ">
+              <li>
+                <a href="#!" class="text-white text-muted">Como realizar o cadastro?</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white text-muted">Documentos Necessários</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white text-muted">Vagas</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white text-muted">Salário</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <h5 class="text-uppercase mb-4">Empresas</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!" class="text-white text-muted">Como realizar o cadastro da minha empresa?</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white text-muted">Documentos Necessários</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white text-muted">Regulamento</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <h5 class="text-uppercase mb-4">Vagas</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!" class="text-white text-muted">Como me candidatar?</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white text-muted">Quem pode candidatar?</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white text-muted">Vagas disponíveis</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+            <h5 class="text-uppercase mb-4">Inscreva-se em nossa newsletter</h5>
+
+            <div class="form-outline form-white mb-4">
+              <input type="email" id="form5Example2" class="form-control" />
+              <label class="form-label" for="form5Example2">Email address</label>
+            </div>
+
+            <button type="submit" class="btn btn-outline-white btn-block btn-success">Inscreva-se</button>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3 border-top border-white">
+        © 2022 Copyright
+        <a class="text-white" href="home.html">Estagg Inc.</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script type="" src="./js/empresasdb.js"></script>
+  <!--     <script src="./js/validToken.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.11.1/sass.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

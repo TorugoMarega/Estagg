@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
+
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <title>Login | Estagg</title>
+</head>
+<body>
+    <div class="container center">
+        <div>
+            <div class="card">
+                <a href="home.html" class="justify-center logo">
+                    <img src="img/Etagg_logo.png" alt="">
+                </a>
+            
+                <h1>Entrar</h1>
+
+                <div id="msgError"></div>
+                <div id="msgSuccess"></div>
+
+                <div class="label-float">
+                    <input type="text" id="usuario" placeholder="" required autocomplete="off">
+                    <label id="userLabel" for="usuario">Usuário</label>
+                </div>
+    
+                <div class="label-float">
+                    <input type="password" name="" id="senha" required autocomplete="off">
+                    <label id="labelSenha" for="senha">Senha</label>
+                    <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
+                </div>
+                
+                <div class="justify-center">
+                    <button type="submit" id="btnEntrar" onclick="entrar()">Entrar</button>
+                </div>
+    
+                <div class="justify-center">
+                    <hr>
+                </div>
+                <p>Não tem uma conta?
+                    <a href="cadastro.html">Cadastre-se</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/login.js"></script>
+<script src="backend/backend.js"></script>  
+</html>

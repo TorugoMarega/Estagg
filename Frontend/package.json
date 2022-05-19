@@ -1,0 +1,16 @@
+{
+  "name": "petshoptela",
+  "version": "1.0.0",
+  "description": "Prototipo de telas petshop",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Victor Hugo Marega e Oliveira",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.1.1",
+    "axios": "^0.26.1",
+    "cors": "^2.8.5"
+  }
+}
