@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 node_modules/
 Database/
 .vscode
 .sql
 .mwb
+=======
+Frontend/node_modules/
+Database/
+>>>>>>> c458b060a573a1be2cd11ed218be1f386305ab11
