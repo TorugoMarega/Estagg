@@ -109,7 +109,7 @@ function cadastrar() {
         msgSuccess.innerHTML = '<strong>Usuário Cadastrado</strong>';
         
         setTimeout(() => {
-            window.location.href = 'index.html';
+            window.location.href = 'login.html';
         }, 2000) 
         
     } else {
