@@ -1,2 +1,5 @@
-Frontend/node_modules/
-/Database
+node_modules/
+Database/
+.vscode
+.sql
+.mwb
