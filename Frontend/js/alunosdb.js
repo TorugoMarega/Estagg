@@ -1,5 +1,9 @@
 let instituicoes = [
     {
+        "nome":"Selecione...",
+        "sigla":""
+    },
+    {
         "nome": "Instituto Federal do Triângulo Mineiro",
         "sigla": "IFTM"
     },
@@ -15,6 +19,9 @@ let instituicoes = [
 
 let cursos = [
     {
+        "nome":"...Selecione"
+    },
+    {
         "nome": "Licenciatura em computação"
     },
     {
@@ -28,51 +35,51 @@ let cursos = [
 let alunosvet = [
     {
         "nome": "Bill Gates",
-        "curso": cursos[0].nome,
-        "instituicao": instituicoes[0].nome + " - " + instituicoes[0].sigla,
+        "curso": cursos[1].nome,
+        "instituicao": instituicoes[1].nome + " - " + instituicoes[1].sigla,
         "cpf": "123.456.789-11",
         "nasc": "29/01/2000"
     },
 
     {
         "nome": "Steve Jobs",
-        "curso": cursos[0].nome,
-        "instituicao": instituicoes[0].nome + " - " + instituicoes[0].sigla,
+        "curso": cursos[1].nome,
+        "instituicao": instituicoes[1].nome + " - " + instituicoes[1].sigla,
         "cpf": "123.565.678-11",
         "nasc": "12/05/1978"
     },
     {
         "nome": "Marina Jaqueline Gabriela Castro",
-        "curso": cursos[2].nome,
-        "instituicao": instituicoes[2].nome + " - " + instituicoes[2].sigla,
+        "curso": cursos[3].nome,
+        "instituicao": instituicoes[3].nome + " - " + instituicoes[3].sigla,
         "cpf": "047.368.912-03",
         "nasc": "17/01/2001"
     },
     {
         "nome": "Martin Benedito Oliveira",
-        "curso": cursos[2].nome,
-        "instituicao": instituicoes[2].nome + " - " + instituicoes[2].sigla,
+        "curso": cursos[3].nome,
+        "instituicao": instituicoes[3].nome + " - " + instituicoes[3].sigla,
         "cpf": "991.423.661-86",
         "nasc": "12/05/1978"
     },
     {
         "nome": "Luís Samuel Sales",
-        "curso": cursos[1].nome,
-        "instituicao": instituicoes[0].nome + " - " + instituicoes[0].sigla,
+        "curso": cursos[2].nome,
+        "instituicao": instituicoes[1].nome + " - " + instituicoes[1].sigla,
         "cpf": "720.936.780-20",
         "nasc": "01/05/1979"
     },
     {
         "nome": "Maitê Andreia Fernandes",
-        "curso": cursos[1].nome,
-        "instituicao": instituicoes[0].nome + " - " + instituicoes[0].sigla,
+        "curso": cursos[2].nome,
+        "instituicao": instituicoes[1].nome + " - " + instituicoes[1].sigla,
         "cpf": "551.353.595-59",
         "nasc": "12/05/1978"
     },
     {
         "nome": "Eduarda Cristiane Bernardes",
-        "curso": cursos[2].nome,
-        "instituicao": instituicoes[2].nome + " - " + instituicoes[2].sigla,
+        "curso": cursos[3].nome,
+        "instituicao": instituicoes[3].nome + " - " + instituicoes[3].sigla,
         "cpf": "123.565.678-11",
         "nasc": "12/05/1978"
     }
@@ -134,8 +141,8 @@ function salvaAluno() {
     var nascForm = document.getElementById("inputNasc").value;
     var novoAluno = {
         nome: nomeForm,
-        curso:cursos[cursoForm].nome,
-        instituicao:instituicoes[intituicaoForm].nome,
+        curso:cursoForm,
+        instituicao:intituicaoForm,
         cpf:cpfForm,
         nasc:nascForm
     }
@@ -152,3 +159,34 @@ document.querySelectorAll('.excluiAluno').forEach(item => {
         excluiAluno(id)
     })
 })
+
+function getInstituicao(){
+    var instituicaoForm = document.getElementById("inputInstituicao");
+    var option0 = `
+        <option selected>Escolha...</option>
+    `
+    var allInst =``
+    instituicoes.forEach(instituicoes => {
+        //console.log(instituicoes.nome)
+        var option = `<option>${instituicoes.nome} - ${instituicoes.sigla}</option>`
+        allInst+=option
+    });
+
+    instituicaoForm.innerHTML=allInst
+}
+getInstituicao()
+
+function getCursos(){
+    var cursosForm = document.getElementById("inputCurso");
+    var option0 = `
+        <option selected>Escolha...</option>
+    `
+    var allCursos =``
+    cursos.forEach(cursos=> {
+        //console.log(cursos.nome)
+        var option = `<option>${cursos.nome}</option>`
+        allCursos+=option
+    });
+    cursosForm.innerHTML=allCursos
+}
+getCursos()

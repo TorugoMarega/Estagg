@@ -8,7 +8,7 @@
 } */
 
 
-const vagas = [
+const empresas = [
     {
         nome: "Luna e Isabella Entregas Expressas Ltda",
         cnpj: "19.368.763/0001-18",
@@ -91,21 +91,21 @@ const submitBtnEmpresa = document.getElementById('btnSalvarEmpresa');
 
 
 
-function getVagas() {
+function getEmpresas() {
     //console.log(empresas)
     const table = document.getElementById('tableEmpresas')
 
     var tableMount = ``
-    for (var i = 0; i < vagas.length; i++) {
+    for (var i = 0; i < empresas.length; i++) {
         var linha = `
             <tr>
                 <th class="fw-bold px-3 align-middle" scope="row">${i + 1}</th>
-                    <td class="text-wrap align-middle">${vagas[i].nome}</td>
-                    <td class="text-wrap align-middle">${vagas[i].cnpj}</td>
-                    <td class="text-wrap align-middle">${vagas[i].inscricaoEstadual}</td>
-                    <td class="text-wrap align-middle">${vagas[i].cep}</td>
-                    <td class="text-wrap align-middle">${vagas[i].logradouro}, ${vagas[i].bairro}, ${vagas[i].numero}</td>
-                    <td class="text-nowrap align-middle">${vagas[i].fone}</td>
+                    <td class="text-wrap align-middle">${empresas[i].nome}</td>
+                    <td class="text-wrap align-middle">${empresas[i].cnpj}</td>
+                    <td class="text-wrap align-middle">${empresas[i].inscricaoEstadual}</td>
+                    <td class="text-wrap align-middle">${empresas[i].cep}</td>
+                    <td class="text-wrap align-middle">${empresas[i].logradouro}, ${empresas[i].bairro}, ${empresas[i].numero}</td>
+                    <td class="text-nowrap align-middle">${empresas[i].fone}</td>
                     <td class="align-middle"><button type="button" class="btn btn-primary btn-sm text-nowrap"><i class="fas fa-pen me-2"></i>Editar</button></td>
                     <td class="align-middle"><button type="button" class="btn btn-danger btn-sm text-nowrap excluiEmpresa"><i class="fas fa-trash me-2"></i>Excluir</button></td>
             </tr> 
@@ -114,18 +114,18 @@ function getVagas() {
     }
     table.innerHTML = tableMount
 }
-getVagas()
+getEmpresas()
 
-function excluiVaga(id) {
+function excluiEmpresa(id) {
     console.log("IDDDDDDDDDDDD :" + id)
     console.log(alunosvet[id])
     if (id === 0 || id === id.length) {
-        vagas.splice(id, id + 1);
+        empresas.splice(id, id + 1);
     }
     else {
-        vagas.splice(id, id);
+        empresas.splice(id, id);
     }
-    getVagas()
+    getEmpresas()
 }
 
 
@@ -151,7 +151,7 @@ function getCep(value) {
 }
 
 
-function salvaVagas() {
+function salvaEmpresa() {
     var nomeForm = document.getElementById("inputNome").value;
     var cnpjForm = document.getElementById("inputCnpj").value;
     var inscricaoForm = document.getElementById("inputInscricao").value;
@@ -172,15 +172,15 @@ function salvaVagas() {
         numero: numForm
     }
     console.log(novaEmpresa)
-    vagas.push(novaEmpresa)
-    getVagas()
+    empresas.push(novaEmpresa)
+    getEmpresas()
 }
-submitBtnEmpresa.addEventListener("click", salvaVagas, false)
+submitBtnEmpresa.addEventListener("click", salvaEmpresa, false)
 
 document.querySelectorAll('.excluiEmpresa').forEach(item => {
     item.addEventListener('click', event => {
         let id = item.parentElement.parentElement.firstElementChild.textContent - 1
         console.log(id)
-        excluiVaga(id)
+        excluiEmpresa(id)
     })
 })
