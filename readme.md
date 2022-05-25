@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="Estagg logo" title="#Estagg-logo" src="Frontend/img/estagg-horizontal-branca.svg" />
+  <img alt="Estagg logo" title="#Estagg-logo" src="Frontend/img/estagg-horizontal.svg" />
 </h1>
 <h1 align="center">
   <img alt="Estagg" title="#Estagg" src="assets/banner.png" />
