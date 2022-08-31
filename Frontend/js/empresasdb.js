@@ -108,7 +108,7 @@ function getEmpresas() {
                     <td class="text-nowrap align-middle">${empresas[i].fone}</td>
                     <td class="align-middle"><button type="button" class="btn btn-primary btn-sm text-nowrap"><i class="fas fa-pen me-2"></i>Editar</button></td>
                     <td class="align-middle"><button type="button" class="btn btn-danger btn-sm text-nowrap excluiEmpresa"><i class="fas fa-trash me-2"></i>Excluir</button></td>
-            </tr> 
+            </tr>      
     `
         tableMount = tableMount + linha
     }
