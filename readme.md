@@ -5,7 +5,7 @@
   <img alt="Estagg" title="#Estagg" src="assets/banner.png" />
 </h1>
 <h1 align="center">
-    <a href="http://estagg.mypressonline.com">🔗 Estagg</a>
+    <a href="https://torugomarega.github.io/Estagg/">🔗 Estagg</a>
 </h1>
 
 
@@ -39,4 +39,4 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Axios](https://axios-http.com/ptbr/docs/intro)
 
 # Como utilizar
-No cabeçalho da [página inicial](http://estagg.mypressonline.com/index.html) podemos ver links que levam respectivamente às páginas de cadastro de [vagas](http://estagg.mypressonline.com/index.html), [alunos](http://estagg.mypressonline.com/Frontend/alunos.html) e [empresas](http://estagg.mypressonline.com/Frontend/empresas.html). As três páginas possuem uma tabela com os dados de cada ator, os dados estão armazenados em arrays e a tabela é montada dinamicamente por um método. Ao clicar no botão de adicionar, aparece um modal com um formulário de cadastro, ao cadastrar algum ator o mesmo será adicionado na página por um método no javascript que monta o objeto pegando o valor dos campos e o "empurra" para o array. No cadastro de [empresas](http://estagg.mypressonline.com/Frontend/empresas.html) há um campo para digitar o CEP, ao clicar fora da caixa do input o logradouro e o bairro são completados automaticamente se o cep for digitado corretamente, essa funcionalidade foi feita consumindo a API [Via Cep](https://viacep.com.br), que retorna os dados via JSON e a partir deles é possível alterar o conteúdo de texto do input via JavaScript.
+No cabeçalho da [página inicial](https://torugomarega.github.io/Estagg/) podemos ver links que levam respectivamente às páginas de cadastro de [vagas](https://torugomarega.github.io/Estagg/Frontend/vagas.html), [alunos](https://torugomarega.github.io/Estagg/Frontend/alunos.html) e [empresas](https://torugomarega.github.io/Estagg/Frontend/empresas.html). As três páginas possuem uma tabela com os dados de cada ator, os dados estão armazenados em arrays e a tabela é montada dinamicamente por um método. Ao clicar no botão de adicionar, aparece um modal com um formulário de cadastro, ao cadastrar algum ator o mesmo será adicionado na página por um método no javascript que monta o objeto pegando o valor dos campos e o "empurra" para o array. No cadastro de [empresas](https://torugomarega.github.io/Estagg/Frontend/empresas.html) há um campo para digitar o CEP, ao clicar fora da caixa do input o logradouro e o bairro são completados automaticamente se o cep for digitado corretamente, essa funcionalidade foi feita consumindo a API [Via Cep](https://viacep.com.br), que retorna os dados via JSON e a partir deles é possível alterar o conteúdo de texto do input via JavaScript.
